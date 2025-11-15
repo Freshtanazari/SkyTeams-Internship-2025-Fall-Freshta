@@ -32,8 +32,3 @@ def triangleType(side1, side2, side3):
     return "Not a Triangle"
         
     
-
-print(triangleType(6, 6, 6))
-print(triangleType(7, 10, 10))
-print(triangleType(3, 4, 5))
-print(triangleType("33b", 4, 5))
