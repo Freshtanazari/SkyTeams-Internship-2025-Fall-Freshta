@@ -27,4 +27,6 @@ function max(array){
     return currMax
 }
 
+module.exports = max;
+
 

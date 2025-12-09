@@ -24,4 +24,5 @@ function sumArray(arr){
     return total;
 }
 
+module.exports = sumArray;
 console.log(sumArray([1.4, 2, 5, 6]))

@@ -19,5 +19,5 @@ function reverseNumber(num){
     }
     return Number(reversedNum);
 }
-
+module.exports = reverseNumber;
 console.log(reverseNumber("-200"));

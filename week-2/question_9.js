@@ -10,12 +10,16 @@ function freqCounter(arr, item){
     if (!Array.isArray(arr)){
         throw new TypeError("Input must be an array");
     }
+
     let count = 0; 
     let i = 0; 
     while (i < arr.length){
         if (arr[i] === item){
-            count ++; 
+            count++; 
         }
+        i++
     }
     return count;
 }
+
+module.exports = freqCounter;

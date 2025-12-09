@@ -18,4 +18,5 @@ function findIn(arr, item){
     }
     return false;
 }
+module.exports = findIn;
 

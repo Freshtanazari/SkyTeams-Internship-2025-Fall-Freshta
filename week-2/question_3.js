@@ -21,3 +21,5 @@ function sumOfDigits(num){
     return sum;
 }
 
+module.exports = sumOfDigits;
+

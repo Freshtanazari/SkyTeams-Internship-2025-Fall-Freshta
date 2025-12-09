@@ -24,3 +24,5 @@ function min(arr){
     }
     return currMin;
 }
+
+module.exports = min;

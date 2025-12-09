@@ -23,3 +23,5 @@ function factors(num){
     }
     return factorsArray;
 }
+
+module.exports = factors;
