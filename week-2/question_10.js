@@ -11,18 +11,19 @@ function isPrime(num){
     if(num === 2){
         return true;
     }
-    if(num === 1 || num % 2 === 0){
+    if(num === 1 | num % 2 === 0){
         return false;
     }
     uppperLimit = Math.sqrt(num);
     for(let i = 2; i <= uppperLimit; i++){
-        if(num % i ===0){
-            return false
-        }else {
-            return true
+        if( num % i === 0){
+            return false 
+        }else{
+            continue
         }
     }
+    return true
 }
 
 module.exports = isPrime;
-// console.log(isPrime())
+console.log(isPrime(3))

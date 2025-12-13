@@ -5,7 +5,7 @@ test("returns sum of digits correctly", ()=>{
 });
 
 test("throws TypeError for non-integers and negative integers", ()=>{
-    expect(()=> sumOfDigits(-123)).toThrow(TypeErrpr);
+    expect(()=> sumOfDigits(-123)).toThrow(TypeError);
     expect(()=> sumOfDigits(12.4)).toThrow(TypeError);
     expect(()=> sumOfDigits("abc")).toThrow(TypeError);
 })

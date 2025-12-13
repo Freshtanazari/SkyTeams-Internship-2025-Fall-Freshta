@@ -18,5 +18,5 @@ test("Correctly handles negative power and float inputs", ()=>{
     expect(power(2.0, -1)).toBe(0.5)
 })
 test("Throws TypeError if the inputs are not number", ()=>{
-    expect(()=>{power("a", "b")}).toThrow(TypeErrors)
+    expect(()=>power("a", "b")).toThrow(TypeError)
 })

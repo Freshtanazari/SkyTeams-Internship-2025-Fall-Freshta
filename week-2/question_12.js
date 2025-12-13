@@ -23,5 +23,5 @@ function isPalindrome(num){
     }
 }
 
-module.exports() = isPalindrome;
+module.exports = isPalindrome;
 

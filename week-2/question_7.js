@@ -6,7 +6,7 @@ function sumArray(arr){
      * @throws {TypeError} - if the input is not an array or the elements are not numbers
      */
     if (!Array.isArray(arr)){
-        throw new TypeError("Input must be an array")
+        throw new TypeError("Input must be an array");
     }
     if (arr.length == 0 ){
         return 0;

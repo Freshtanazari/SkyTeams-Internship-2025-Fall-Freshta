@@ -7,7 +7,7 @@ test("freqCounter returns corrent count of occurrences", ()=>{
 })
 
 test("FreqCounter throws TypeError for non-array inputs", ()=>{
-    expect(()=> freqCounter("not an array", 3)).toThrows(TypeError);
+    expect(()=> freqCounter("not an array", 3)).toThrow(TypeError);
 })
 
 test("FreqCounter returns 0 when the array is empty", ()=>{

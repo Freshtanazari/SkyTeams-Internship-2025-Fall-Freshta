@@ -8,7 +8,7 @@ function power(a, b){
      */
 
     if(typeof a != "number" | typeof b != "number"){
-        throw new typeError("Both inputs must be a number");
+        throw new TypeError("Both inputs must be a number");
     }
     result = 0;
     if(b == 1 | a == 0){
