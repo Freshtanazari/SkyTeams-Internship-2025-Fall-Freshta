@@ -35,6 +35,5 @@ function fibonacci(num){
     }
     return sequence
 }
-console.log(fibonacci(1))
-
+console.log(fibonacci(0))
 module.exports = fibonacci;

@@ -6,14 +6,14 @@ function RightAnglePattern(num){
      * @throws {TypeError} - if the input is not a positive integer
      * 
      */
-    if(!Number.isInteger(num) | num < 0 ){
+    if(!Number.isInteger(num) || num < 0 ){
         throw new TypeError("Please input a positive integer");
     }
-    str = "";
-    for(let i = 0; i <= num ;i++){
+    let str = "";
+    for(let i = 1; i <= num ;i++){
         str += "*".repeat(i) + "\n"
     }
     return str
-}
+};
+module.exports = RightAnglePattern;
 
-console.log(RightAnglePattern(4))

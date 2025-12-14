@@ -1,19 +1,20 @@
 function factorial(num){
     /**
-     * returns the factorial of a number
-     * @param {Integer} num - the given input 
-     * @return {Integer} - returns the factorial of the number
-     * @throws {TypeError} - if the input is not a positive integer
-     * @throws {Error} - if the integer is not positive
+     * returns the factorial of a number using iterative loops
+     * @param {integer} num - the given input
+     * @return {number} - the result of the factorial
+     * @throws {TypeError} - if the input is not a positive integer or an integer at all
      */
-    if(!Number.isInteger(num)){
-        throw new TypeError("Please input a postive integer")
-    }if(num < 0){
-        throw new Error("Please enter a positive integer")
+    if(! Number.isInteger(num)){
+        throw new TypeError("Please enter an integer")
     }
-    if(num == 0 ){
-        return 1
+    if(num < 0){
+        throw new TypeError("Please Enter a postive integer");
     }
-    return num * factorial(num-1)
+    let total = 1;
+    for (let i = 1 ; i <= num; i++){
+        total *= i ;
+    }
+    return total 
 }
-module.exports = factorial;
+console.log(factorial(5));

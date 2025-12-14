@@ -10,10 +10,12 @@ function RightAlignedPattern(num){
         throw new TypeError("Please input a positive integer");
     }
     str = "";
-    for(let i = 0; i <= num ;i++){
+    for(let i = 1; i <= num ;i++){
         space = " ".repeat(num - i)
         str += space + "*".repeat(i) + "\n"
     }
     return str
 }
-console.log(RightAnglePattern(4))
+console.log(RightAlignedPattern(3));
+
+module.exports = RightAlignedPattern;

@@ -6,18 +6,17 @@ function PyramidPattern(num){
      * @throws {TypeError} - if the input is not a positive integer
      * 
      */
-    if(!Number.isInteger(num) | num <= 0 ){
+    if(!Number.isInteger(num) | num < 0 ){
         throw new TypeError("Please input a positive integer");
     }
-    str = "";
+    let str = "";
     let i = 0;
-    count = 1; 
-    while(i <= num){
+    while(i < num){
         space = " ".repeat(num - i);
-        str += space + "*".repeat(i + count) + "\n"
-        count++
+        str += space + "*".repeat(i * 2 + 1) + "\n"
         i++
     }
     return str
 }
-console.log(PyramidPattern(7))
+module.exports = PyramidPattern;
+console.log(PyramidPattern(4))
