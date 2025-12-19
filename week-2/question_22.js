@@ -8,7 +8,7 @@ function collatzSeq(num){
     if (! Number.isInteger(num)){
         throw new TypeError("Make sure you enter an integer")
     }
-    if(num<= 0 ){
+    if(num <= 0 ){
         throw new TypeError("Integer 0 or negative are not valid for collatz sequence");
     }
     sequence = [num];

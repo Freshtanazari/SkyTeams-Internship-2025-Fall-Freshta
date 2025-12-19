@@ -1,4 +1,4 @@
-const factorial  = require("./question_22.js")
+const factorial  = require("./question_23.js")
 
 test("Output the correct factorial results", ()=>{
     expect(factorial(5)).toBe(120);
