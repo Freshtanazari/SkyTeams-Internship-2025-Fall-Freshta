@@ -14,8 +14,8 @@ function isPrime(num){
     if(num === 1 | num % 2 === 0){
         return false;
     }
-    uppperLimit = Math.sqrt(num);
-    for(let i = 2; i <= uppperLimit; i++){
+    upperLimit = Math.sqrt(num);
+    for(let i = 2; i <= upperLimit; i++){
         if( num % i === 0){
             return false 
         }else{
