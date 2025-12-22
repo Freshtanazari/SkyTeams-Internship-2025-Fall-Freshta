@@ -23,6 +23,3 @@ def maxAndMin(listOf3Nums):
         if min > listOf3Nums[i]:
             min = listOf3Nums[i]
     return max, min
-
-print(maxAndMin([300, 0, 30]))
-print(maxAndMin([300, 0, 30, 3000, 432, 223523, 0]))
