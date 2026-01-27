@@ -5,7 +5,7 @@ class Stack{
         this.size = 0
     }
 
-    push(item ){
+    push(item){
         this.stack[this.size] = item ;
         this.size += 1;
     }

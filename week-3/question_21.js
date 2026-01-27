@@ -10,39 +10,25 @@ function longestPalindromic(str){
     if(typeof str != "string"){
         throw new TypeError("the input must only be strings")
     }
-    let chars = str.trim().split("");
-    // using a two stacks
-
-    let backward = [];
-    let end = chars.length - 1
-    while(end >= 0 ){
-        backward.push(chars[end])
-        end--;
-    }
-
-    console.log(chars)
-    console.log(backward)
-
-    let longestSubstring = "";
-    let subString = "";
-    // let currentChar = chars[0]
-    for(let j = 0; j < chars.length; j++){
-        for(let i = 0; i < backward.length; i++){
-            if(chars[j] == backward[i]){
-                subString += chars[j];
-                // console.log(subString)
-            }else{
-                if(subString.length > longestSubstring.length){
-                    longestSubstring = subString;
-                    subString = "";
-                }
+    function checkBalance(left, right, center){
+            while (right < str.length && left >= 0){
+                if(str[right] == str[left]){
+                    center = str[left] + center + str[right];
+                    right++;
+                    left--;
+                }else break;
             }
-        }
-        subString = "";
+            return center;
     }
-    return longestSubstring;
+    
+    let longest = "";
+    for(let i = 0; i < str.length ; i++){
+        let odd =checkBalance(i-1, i+1, str[i]);
+        let even = checkBalance(i, i+1, "");
+        if (odd.length > longest.length) longest = odd;
+        if(even.length > longest.length) longest = even;
+    }
+    if(longest.length == 1 ) longest = "no palindromic";
+    return longest;
 }
 
-// console.log(longestPalindromic("babad"))
-// console.log(longestPalindromic("racecar"))
-console.log(longestPalindromic("xyzzy"));

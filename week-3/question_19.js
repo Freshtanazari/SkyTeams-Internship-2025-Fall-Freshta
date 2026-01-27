@@ -43,12 +43,3 @@ class Queue{
 
 module.exports = Queue;
 
-let queue = new Queue()
-
-queue.enqueue("first book")
-queue.enqueue("second book")
-queue.enqueue("third book")
-
-console.log(queue.peek())
-
-console.log(queue.displayQueue())
