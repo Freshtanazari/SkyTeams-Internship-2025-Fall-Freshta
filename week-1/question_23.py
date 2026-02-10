@@ -33,6 +33,3 @@ def fibonacci(num):
     return series
     
     
-    
-
-print(fibonacci(-10))
