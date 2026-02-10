@@ -3,37 +3,46 @@ function setMatrixZero(arr){
      * returns a matrix
      */
     // check if 2d array 
-    rowsNum = arr.length-1
-    colsNum = arr[0].length-1
+    rowsNum = arr.length
+    colsNum = arr[0].length
+    let firstRow = false;
 
     for(let i = 0; i <arr.length; i++){
         for(let j = 0; j < arr[i].length; j++){
-            console.log("this too has run")
             if(arr[i][j] == 0){
-                arr[0][j] = 0;
-                arr[i][0] = 0;  
+                console.log("this too has run")
+                    arr[0][j] = 0;
+                    if(i > 0){
+                        arr[i][0] = 0; 
+                    }else{
+                        firstRow = true
+                    }
+                }
+        }
+    }
+    for (let i = 1; i < rowsNum; i++){
+        for(let j = 1; j < colsNum; j++){
+            if(arr[0][j] == 0 || arr[i][0] == 0){
+                arr[i][j] = 0
             }
+        }
+    }
+    if(arr[0][0] == 0 ){
+        for(let i = 0; i < rowsNum; i++){
+            arr[i][0] = 0 
+        }
+    }
+    if(firstRow){
+        for(let j = 0; j < colsNum ; j++){
+            arr[0][j] = 0;
         }
     }
 
-    for(let i = 0; i < arr.length; i++){
-        for(let j = 0; j < arr[i].length; j++){
-        if(arr[0][j]==0 && arr[i][0]==0){
-            console.log("this has run")
-            for(let row = 0; row <= rowsNum; row++){
-                arr[row][j] = 0
-            }
-            for(let col = 0; col <= colsNum; col++){
-                arr[i][col] = 0
-            }
-        }
-        }
-    }
     return arr
 }
 
 console.log(setMatrixZero([
- [1, 2, 0],
- [4, 5, 6],
- [0, 8, 9]
+  [1, 2, 3],
+  [0, 5, 6],
+  [7, 8, 9]
 ]))
